@@ -1,0 +1,25 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["leeparnell <152523161+leeparnell@users.noreply.github.com>"]
+description = ""
+name = "pdl-api"
+packages = [{include = "pdl_api"}]
+readme = "README.md"
+version = "0.1.2"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+peopledatalabs = "^3.1.2"
+pydantic-settings = "^2.3.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+toml-sort = "^0.23.1"
+
+[tool.tomlsort]
+all = true
+in_place = true
+overrides."tool.poetry.dependencies".first = ["python"]
